@@ -8,6 +8,8 @@ export default function AboutSection({ schedule }) {
       <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-12">
         <InfoCard icon={<LocationIcon />} title="LOKACIJA" className="md:col-span-4">
           <p className="mb-5 text-sm leading-7 text-zinc-400">
+            BJJ treninzi u Puli
+            <br />
             Šijanska cesta 1a
             <br />
             Pula
@@ -22,6 +24,9 @@ export default function AboutSection({ schedule }) {
         </InfoCard>
 
         <InfoCard icon={<ClockIcon />} title="TERMINI TRENINGA" className="md:col-span-5">
+          <p className="mb-4 text-sm leading-7 text-zinc-400">
+            Brazilian Jiu Jitsu treninzi održavaju se tri puta tjedno.
+          </p>
           <div className="space-y-2 text-sm">
             {schedule.map(([day, time], index) => (
               <div

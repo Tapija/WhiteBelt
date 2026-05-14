@@ -13,7 +13,7 @@ export default function CtaSection() {
             Treniraj s nama i postani najsnažnija verzija sebe.
           </h2>
           <p className="mt-4 max-w-2xl text-base leading-7 text-zinc-400 md:text-lg">
-            Posvečenost treningu, jasan sustav i ekipa koja poštuje rad.
+            Posvećenost BJJ treningu, jasan sustav i ekipa u Puli koja poštuje rad.
           </p>
         </div>
         <div className="px-6 pb-6 md:px-8 md:pb-8">

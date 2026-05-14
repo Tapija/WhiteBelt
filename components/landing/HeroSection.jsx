@@ -7,7 +7,7 @@ export default function HeroSection({ wordmarkImage, heroImage }) {
       <div className="mx-auto grid w-full max-w-7xl gap-12 px-4 pb-16 pt-32 sm:px-8 md:grid-cols-[minmax(0,0.95fr)_minmax(420px,1.05fr)] md:px-12 md:pb-24 md:pt-36 lg:gap-20 lg:px-16">
         <div className="max-w-2xl self-center">
           <div className="mb-6 inline-flex rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-[10px] font-medium uppercase tracking-[0.28em] text-zinc-300">
-            Lokalna jiu jitsu akademija
+            BJJ i Brazilian Jiu Jitsu u Puli
           </div>
           <img src={wordmarkImage.src} alt="White Belt" className="w-full max-w-[25rem] md:max-w-[29rem]" />
           <p className="mb-6 mt-1 text-xl font-medium tracking-[0.38em] text-zinc-300 md:text-[2rem]">
@@ -15,7 +15,8 @@ export default function HeroSection({ wordmarkImage, heroImage }) {
           </p>
           <div className="mb-8 h-px w-20 bg-white/80" />
           <p className="max-w-[34rem] text-lg leading-relaxed text-zinc-400 md:text-xl">
-            Gradimo čvrste temelje, disciplinu i samopouzdanje koje ostaje na strunjači i izvan nje.
+            Lokalni BJJ klub u Puli za početnike i rekreativce — gradimo čvrste temelje, disciplinu i
+            samopouzdanje koje ostaje na strunjači i izvan nje.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
             <Link
