@@ -1,4 +1,5 @@
 import { Barlow_Condensed, Plus_Jakarta_Sans } from 'next/font/google'
+import Script from 'next/script'
 import './globals.css'
 
 const plusJakartaSans = Plus_Jakarta_Sans({
@@ -16,12 +17,21 @@ const barlowCondensed = Barlow_Condensed({
 
 export const metadata = {
   title: 'White Belt Jiu Jitsu',
-  description: 'White Belt Jiu Jitsu landing page for a local martial arts club.',
+  description: 'White Belt Jiu Jitsu stranica lokalnog jiu jitsu kluba u Puli.',
 }
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="hr" className="scroll-smooth">
+      <head>
+        {process.env.NODE_ENV === 'development' ? (
+          <Script
+            src="https://unpkg.com/react-grab/dist/index.global.js"
+            crossOrigin="anonymous"
+            strategy="beforeInteractive"
+          />
+        ) : null}
+      </head>
       <body className={`${plusJakartaSans.variable} ${barlowCondensed.variable} bg-base text-white antialiased`}>
         {children}
       </body>

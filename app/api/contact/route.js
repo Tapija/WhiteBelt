@@ -20,7 +20,7 @@ export async function POST(request) {
   try {
     body = await request.json()
   } catch {
-    return NextResponse.json({ error: 'Invalid request body.' }, { status: 400 })
+    return NextResponse.json({ error: 'Neispravan sadržaj zahtjeva.' }, { status: 400 })
   }
 
   const name = (body?.name ?? '').toString().trim()
@@ -30,23 +30,23 @@ export async function POST(request) {
   const website = (body?.website ?? '').toString().trim()
 
   if (website) {
-    return NextResponse.json({ message: 'Your message has been sent.' })
+    return NextResponse.json({ message: 'Poruka je uspješno poslana.' })
   }
 
   if (name.length < 2 || name.length > 120) {
-    return NextResponse.json({ error: 'Please enter a valid name.' }, { status: 400 })
+    return NextResponse.json({ error: 'Unesi ispravno ime.' }, { status: 400 })
   }
 
   if (!isValidEmail(email) || email.length > 160) {
-    return NextResponse.json({ error: 'Please enter a valid email address.' }, { status: 400 })
+    return NextResponse.json({ error: 'Unesi ispravnu email adresu.' }, { status: 400 })
   }
 
   if (phone.length > 40) {
-    return NextResponse.json({ error: 'Please enter a valid phone number.' }, { status: 400 })
+    return NextResponse.json({ error: 'Unesi ispravan broj telefona.' }, { status: 400 })
   }
 
   if (message.length < 20 || message.length > 4000) {
-    return NextResponse.json({ error: 'Please enter a message between 20 and 4000 characters.' }, { status: 400 })
+    return NextResponse.json({ error: 'Unesi poruku od 20 do 4000 znakova.' }, { status: 400 })
   }
 
   const resendApiKey = process.env.RESEND_API_KEY
@@ -55,7 +55,7 @@ export async function POST(request) {
 
   if (!resendApiKey || !from || !to?.length) {
     return NextResponse.json(
-      { error: 'Email is not configured yet. Add the required environment variables and try again.' },
+      { error: 'Email još nije postavljen. Dodaj potrebne varijable okruženja i pokušaj ponovno.' },
       { status: 500 },
     )
   }
@@ -64,27 +64,27 @@ export async function POST(request) {
 
   const safeName = escapeHtml(name)
   const safeEmail = escapeHtml(email)
-  const safePhone = phone ? escapeHtml(phone) : 'Not provided'
+  const safePhone = phone ? escapeHtml(phone) : 'Nije navedeno'
   const safeMessage = escapeHtml(message).replace(/\n/g, '<br />')
 
   const html = `
     <div style="font-family: Arial, sans-serif; color: #111; line-height: 1.6;">
-      <h2 style="margin-bottom: 16px;">New White Belt contact form submission</h2>
-      <p><strong>Name:</strong> ${safeName}</p>
+      <h2 style="margin-bottom: 16px;">Nova poruka preko White Belt kontakt forme</h2>
+      <p><strong>Ime:</strong> ${safeName}</p>
       <p><strong>Email:</strong> ${safeEmail}</p>
-      <p><strong>Phone:</strong> ${safePhone}</p>
-      <p><strong>Message:</strong><br />${safeMessage}</p>
+      <p><strong>Telefon:</strong> ${safePhone}</p>
+      <p><strong>Poruka:</strong><br />${safeMessage}</p>
     </div>
   `
 
   const text = [
-    'New White Belt contact form submission',
+    'Nova poruka preko White Belt kontakt forme',
     '',
-    `Name: ${name}`,
+    `Ime: ${name}`,
     `Email: ${email}`,
-    `Phone: ${phone || 'Not provided'}`,
+    `Telefon: ${phone || 'Nije navedeno'}`,
     '',
-    'Message:',
+    'Poruka:',
     message,
   ].join('\n')
 
@@ -92,7 +92,7 @@ export async function POST(request) {
     {
       from,
       to,
-      subject: `New contact form inquiry from ${name}`,
+      subject: `Nova prijava preko kontakt forme - ${name}`,
       replyTo: email,
       html,
       text,
@@ -103,8 +103,8 @@ export async function POST(request) {
   )
 
   if (error) {
-    return NextResponse.json({ error: error.message || 'Unable to send your message right now.' }, { status: 500 })
+    return NextResponse.json({ error: error.message || 'Trenutačno nije moguće poslati poruku.' }, { status: 500 })
   }
 
-  return NextResponse.json({ message: 'Your message has been sent.', data })
+  return NextResponse.json({ message: 'Poruka je uspješno poslana.', data })
 }

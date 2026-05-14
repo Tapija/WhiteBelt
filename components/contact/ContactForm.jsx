@@ -40,12 +40,12 @@ export default function ContactForm() {
         body: JSON.stringify(value),
       })
 
-      const payload = await response.json().catch(() => ({ error: 'Unable to send your message right now.' }))
+      const payload = await response.json().catch(() => ({ error: 'Trenutačno nije moguće poslati poruku.' }))
 
       if (!response.ok) {
         setSubmitState({
           type: 'error',
-          message: payload.error || 'Unable to send your message right now.',
+          message: payload.error || 'Trenutačno nije moguće poslati poruku.',
         })
         return
       }
@@ -53,7 +53,7 @@ export default function ContactForm() {
       formApi.reset()
       setSubmitState({
         type: 'success',
-        message: payload.message || 'Your message has been sent. We will get back to you soon.',
+        message: payload.message || 'Poruka je uspješno poslana. Javit ćemo ti se uskoro.',
       })
     },
   })
@@ -63,13 +63,13 @@ export default function ContactForm() {
       <div className="rounded-[calc(2rem-0.375rem)] border border-white/10 bg-zinc-950/90 p-6 shadow-[inset_0_1px_1px_rgba(255,255,255,0.14)] sm:p-8">
         <div className="mb-6">
           <div className="inline-flex rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-[10px] font-medium uppercase tracking-[0.28em] text-zinc-300">
-            Send us a message
+            Pošalji poruku
           </div>
           <h2 className="mt-4 font-display text-[clamp(2.25rem,5vw,4.25rem)] uppercase leading-[0.92] tracking-[0.03em] text-white">
-            Book your first conversation.
+            Dogovorimo tvoj prvi dolazak.
           </h2>
           <p className="mt-4 max-w-2xl text-sm leading-7 text-zinc-400 sm:text-base">
-            Tell us a bit about your experience and goals. We will reach out with the best next step for getting you on the mats.
+            Napiši nam nešto o svom iskustvu i ciljevima. Javit ćemo ti se s najboljim sljedećim korakom za dolazak na trening.
           </p>
         </div>
 
@@ -102,8 +102,8 @@ export default function ContactForm() {
               name="name"
               validators={{
                 onBlur: ({ value }) => {
-                  if (!value.trim()) return 'Name is required.'
-                  if (value.trim().length < 2) return 'Please enter your full name.'
+                  if (!value.trim()) return 'Ime je obavezno.'
+                  if (value.trim().length < 2) return 'Upiši ime i prezime.'
                   return undefined
                 },
               }}
@@ -111,7 +111,7 @@ export default function ContactForm() {
               {(field) => (
                 <label className="block text-sm text-zinc-300">
                   <span className="mb-2 block text-[11px] font-medium uppercase tracking-[0.24em] text-zinc-400">
-                    Name
+                    Ime
                   </span>
                   <input
                     type="text"
@@ -120,7 +120,7 @@ export default function ContactForm() {
                     onBlur={field.handleBlur}
                     onChange={(event) => field.handleChange(event.target.value)}
                     className="w-full rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-white outline-none transition duration-300 placeholder:text-zinc-600 focus:border-white/30"
-                    placeholder="Your full name"
+                    placeholder="Ime i prezime"
                   />
                   <FieldError field={field} />
                 </label>
@@ -131,8 +131,8 @@ export default function ContactForm() {
               name="email"
               validators={{
                 onBlur: ({ value }) => {
-                  if (!value.trim()) return 'Email is required.'
-                  if (!isValidEmail(value.trim())) return 'Enter a valid email address.'
+                  if (!value.trim()) return 'Email je obavezan.'
+                  if (!isValidEmail(value.trim())) return 'Unesi ispravnu email adresu.'
                   return undefined
                 },
               }}
@@ -149,7 +149,7 @@ export default function ContactForm() {
                     onBlur={field.handleBlur}
                     onChange={(event) => field.handleChange(event.target.value)}
                     className="w-full rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-white outline-none transition duration-300 placeholder:text-zinc-600 focus:border-white/30"
-                    placeholder="you@example.com"
+                    placeholder="ti@example.com"
                   />
                   <FieldError field={field} />
                 </label>
@@ -162,7 +162,7 @@ export default function ContactForm() {
             validators={{
               onBlur: ({ value }) => {
                 if (!value.trim()) return undefined
-                if (value.trim().length < 7) return 'Please enter a valid phone number.'
+                if (value.trim().length < 7) return 'Unesi ispravan broj telefona.'
                 return undefined
               },
             }}
@@ -170,7 +170,7 @@ export default function ContactForm() {
             {(field) => (
               <label className="block text-sm text-zinc-300">
                 <span className="mb-2 block text-[11px] font-medium uppercase tracking-[0.24em] text-zinc-400">
-                  Phone (optional)
+                  Telefon (nije obavezan)
                 </span>
                 <input
                   type="tel"
@@ -179,7 +179,7 @@ export default function ContactForm() {
                   onBlur={field.handleBlur}
                   onChange={(event) => field.handleChange(event.target.value)}
                   className="w-full rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-white outline-none transition duration-300 placeholder:text-zinc-600 focus:border-white/30"
-                  placeholder="Best number to reach you"
+                  placeholder="Broj na koji te možemo dobiti"
                 />
                 <FieldError field={field} />
               </label>
@@ -191,8 +191,8 @@ export default function ContactForm() {
             validators={{
               onBlur: ({ value }) => {
                 const trimmed = value.trim()
-                if (!trimmed) return 'Message is required.'
-                if (trimmed.length < 20) return 'Please share a little more detail.'
+                if (!trimmed) return 'Poruka je obavezna.'
+                if (trimmed.length < 20) return 'Napiši malo više detalja.'
                 return undefined
               },
             }}
@@ -200,7 +200,7 @@ export default function ContactForm() {
             {(field) => (
               <label className="block text-sm text-zinc-300">
                 <span className="mb-2 block text-[11px] font-medium uppercase tracking-[0.24em] text-zinc-400">
-                  Message
+                  Poruka
                 </span>
                 <textarea
                   name={field.name}
@@ -209,7 +209,7 @@ export default function ContactForm() {
                   onChange={(event) => field.handleChange(event.target.value)}
                   rows={6}
                   className="w-full rounded-[1.5rem] border border-white/10 bg-white/[0.03] px-4 py-3 text-white outline-none transition duration-300 placeholder:text-zinc-600 focus:border-white/30"
-                  placeholder="Tell us about your training background, schedule, or what you want from your first class."
+                  placeholder="Napiši nam nešto o svom iskustvu, rasporedu ili onome što želiš od prvog treninga."
                 />
                 <FieldError field={field} />
               </label>
@@ -230,7 +230,7 @@ export default function ContactForm() {
 
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
             <p className="max-w-xl text-xs uppercase tracking-[0.22em] text-zinc-500">
-              By submitting, you agree that White Belt may contact you about classes and scheduling.
+              Slanjem obrasca pristaješ da te White Belt kontaktira oko treninga i termina.
             </p>
             <form.Subscribe selector={(state) => [state.canSubmit, state.isSubmitting, state.isPristine]}>
               {([canSubmit, isSubmitting, isPristine]) => (
@@ -239,7 +239,7 @@ export default function ContactForm() {
                   disabled={!canSubmit || isPristine || isSubmitting}
                   className="group inline-flex items-center justify-between rounded-full border border-white bg-white px-6 py-3 text-sm font-bold tracking-[0.22em] text-black transition-all duration-700 ease-premium hover:-translate-y-px hover:bg-zinc-100 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60"
                 >
-                  <span>{isSubmitting ? 'SENDING...' : 'SEND MESSAGE'}</span>
+                  <span>{isSubmitting ? 'ŠALJEMO...' : 'POŠALJI PORUKU'}</span>
                   <span className="ml-4 inline-flex h-8 w-8 items-center justify-center rounded-full bg-black text-white transition-all duration-700 ease-premium group-hover:translate-x-1 group-hover:-translate-y-[1px] group-hover:scale-105">
                     <ArrowIcon className="h-3.5 w-3.5" />
                   </span>

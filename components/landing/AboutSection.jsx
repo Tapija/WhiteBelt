@@ -4,26 +4,24 @@ import { ArrowIcon, ClockIcon, LocationIcon, UsersIcon } from './icons'
 
 export default function AboutSection({ schedule }) {
   return (
-    <section className="px-4 py-24 sm:px-8 md:px-12 md:py-32 lg:px-16" id="about">
+    <section className="px-4 pb-24 pt-10 sm:px-8 md:px-12 md:pb-28 md:pt-14 lg:px-16" id="about">
       <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-12">
-        <InfoCard icon={<LocationIcon />} title="LOCATION" className="md:col-span-4">
+        <InfoCard icon={<LocationIcon />} title="LOKACIJA" className="md:col-span-4">
           <p className="mb-5 text-sm leading-7 text-zinc-400">
-            123 Grapple Ave
+            Šijanska cesta 1a
             <br />
-            Fighter City, FC 12345
-            <br />
-            United States
+            Pula
           </p>
           <Link
             href="/contact"
             className="inline-flex items-center gap-2 text-sm font-medium tracking-[0.18em] transition duration-500 ease-premium hover:text-zinc-300"
           >
-            <span>GET IN TOUCH</span>
+            <span>JAVI NAM SE</span>
             <ArrowIcon />
           </Link>
         </InfoCard>
 
-        <InfoCard icon={<ClockIcon />} title="TRAINING TIMES" className="md:col-span-5">
+        <InfoCard icon={<ClockIcon />} title="TERMINI TRENINGA" className="md:col-span-5">
           <div className="space-y-2 text-sm">
             {schedule.map(([day, time], index) => (
               <div
@@ -41,9 +39,9 @@ export default function AboutSection({ schedule }) {
           </div>
         </InfoCard>
 
-        <InfoCard icon={<UsersIcon />} title="ALL LEVELS" className="md:col-span-3">
+        <InfoCard icon={<UsersIcon />} title="ZA SVE RAZINE" className="md:col-span-3">
           <p className="text-sm leading-7 text-zinc-400">
-            From complete beginners to experienced grapplers, every class is structured to make progress feel steady.
+            Od potpunih početnika do iskusnih vježbača, svaki trening je strukturiran tako da napredak bude jasan i postupan.
           </p>
         </InfoCard>
       </div>

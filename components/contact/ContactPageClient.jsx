@@ -21,36 +21,36 @@ export default function ContactPageClient() {
             <section className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-1.5">
               <div className="rounded-[calc(2rem-0.375rem)] border border-white/10 bg-zinc-950/90 p-8 shadow-[inset_0_1px_1px_rgba(255,255,255,0.14)] sm:p-10">
                 <div className="inline-flex rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-[10px] font-medium uppercase tracking-[0.28em] text-zinc-300">
-                  Contact White Belt
+                  Kontaktiraj White Belt
                 </div>
                 <h1 className="mt-5 font-display text-[clamp(3rem,7vw,5.5rem)] uppercase leading-[0.9] tracking-[0.03em] text-white">
-                  Let&apos;s get you on the mats.
+                  Krenimo s tvojim prvim treningom.
                 </h1>
                 <p className="mt-5 max-w-xl text-base leading-7 text-zinc-400 sm:text-lg">
-                  Whether you are brand new or returning to training, send us a note and we will point you toward the right first class.
+                  Bilo da tek počinješ ili se vraćaš treninzima, pošalji nam poruku i usmjerit ćemo te prema pravom prvom terminu.
                 </p>
 
                 <div className="mt-10 space-y-6 border-t border-white/10 pt-8">
                   <div>
                     <p className="text-[11px] font-medium uppercase tracking-[0.24em] text-zinc-500">Email</p>
-                    <p className="mt-2 text-lg text-zinc-200">hello@whitebeltclub.com</p>
+                    <p className="mt-2 text-lg text-zinc-200">whitebeltbjj.pula@gmail.com </p>
                   </div>
                   <div>
-                    <p className="text-[11px] font-medium uppercase tracking-[0.24em] text-zinc-500">Visit</p>
+                    <p className="text-[11px] font-medium uppercase tracking-[0.24em] text-zinc-500">Lokacija</p>
                     <p className="mt-2 text-lg leading-8 text-zinc-200">
-                      123 Grapple Ave
+                      Šijanska cesta 1a
                       <br />
-                      Fighter City, FC 12345
+                      Pula
                     </p>
                   </div>
                   <div>
-                    <p className="text-[11px] font-medium uppercase tracking-[0.24em] text-zinc-500">Training Nights</p>
+                    <p className="text-[11px] font-medium uppercase tracking-[0.24em] text-zinc-500">Termini treninga</p>
                     <p className="mt-2 text-lg leading-8 text-zinc-200">
-                      Monday · 6:00 PM – 7:00 PM
+                      Ponedjeljak · 18:00 – 19:00
                       <br />
-                      Wednesday · 6:00 PM – 7:00 PM
+                      Srijeda · 18:00 – 19:00
                       <br />
-                      Friday · 6:00 PM – 7:00 PM
+                      Petak · 18:00 – 19:00
                     </p>
                   </div>
                 </div>

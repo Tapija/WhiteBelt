@@ -1,8 +1,8 @@
 import ContactPageClient from '../../components/contact/ContactPageClient'
 
 export const metadata = {
-  title: 'Contact | White Belt Jiu Jitsu',
-  description: 'Reach out to White Belt Jiu Jitsu to ask about classes, scheduling, and getting started.',
+  title: 'Kontakt | White Belt Jiu Jitsu',
+  description: 'Javi se White Belt Jiu Jitsu klubu za informacije o treninzima, terminima i prvom dolasku.',
 }
 
 export default function ContactPage() {

@@ -2,8 +2,10 @@
 
 import { useState } from 'react'
 import heroImage from '../../WBHero3.png'
+import promoPic3 from '../../promopic4.JPG'
 import promoPic1 from '../../promopic1.jpeg'
 import promoPic2 from '../../promopic2.jpeg'
+import promoPic4 from '../../2fa7fdd6-de06-47c8-a43e-3f5e3d816310.JPG'
 import wordmarkImage from '../../WB-NegativNoTM.png'
 import brandLogo from '../../Logo A-Negativ.png'
 import AboutSection from './AboutSection'
@@ -13,11 +15,12 @@ import Footer from './Footer'
 import HeroSection from './HeroSection'
 import ImageLightbox from './ImageLightbox'
 import SiteHeader from './SiteHeader'
+import TrainerSection from './TrainerSection'
 
 const schedule = [
-  ['Monday', '6:00 PM / 7:00 PM'],
-  ['Wednesday', '6:00 PM / 7:00 PM'],
-  ['Friday', '6:00 PM / 7:00 PM'],
+  ['Ponedjeljak', '18:00 – 19:00'],
+  ['Srijeda', '18:00 – 19:00'],
+  ['Petak', '18:00 – 19:00'],
 ]
 
 export default function HomePageClient() {
@@ -35,13 +38,16 @@ export default function HomePageClient() {
 
         <main className="w-full max-w-full overflow-x-hidden">
           <HeroSection wordmarkImage={wordmarkImage} heroImage={heroImage} />
-          <AboutSection schedule={schedule} />
+          <TrainerSection />
           <ClassesSection
             brandLogo={brandLogo}
             promoPic1={promoPic1}
             promoPic2={promoPic2}
+            promoPic3={promoPic3}
+            promoPic4={promoPic4}
             onOpenImage={setActiveImage}
           />
+          <AboutSection schedule={schedule} />
           <CtaSection />
         </main>
 

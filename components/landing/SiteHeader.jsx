@@ -20,25 +20,25 @@ export default function SiteHeader({
           {showSectionLinks ? (
             <>
               <a href="#top" className={`pb-1 text-sm font-medium tracking-[0.24em] ${active === 'home' ? 'border-b border-white text-white' : 'text-zinc-400 transition duration-500 ease-premium hover:text-white'}`}>
-                HOME
+                POČETNA
               </a>
               <a href="#about" className="text-sm font-medium tracking-[0.24em] text-zinc-400 transition duration-500 ease-premium hover:text-white">
-                ABOUT
+                TRENINZI
               </a>
-              <a href="#classes" className="text-sm font-medium tracking-[0.24em] text-zinc-400 transition duration-500 ease-premium hover:text-white">
-                CLASSES
+              <a href="#trainer" className="text-sm font-medium tracking-[0.24em] text-zinc-400 transition duration-500 ease-premium hover:text-white">
+                O NAMA
               </a>
               <Link href={contactHref} className="text-sm font-medium tracking-[0.24em] text-zinc-400 transition duration-500 ease-premium hover:text-white">
-                CONTACT
+                KONTAKT
               </Link>
             </>
           ) : (
             <>
               <Link href="/" className="text-sm font-medium tracking-[0.24em] text-zinc-400 transition duration-500 ease-premium hover:text-white">
-                HOME
+                POČETNA
               </Link>
               <span className="border-b border-white pb-1 text-sm font-medium tracking-[0.24em] text-white">
-                CONTACT
+                KONTAKT
               </span>
             </>
           )}

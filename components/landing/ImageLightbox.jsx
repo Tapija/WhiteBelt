@@ -43,13 +43,13 @@ export default function ImageLightbox({ image, onClose }) {
         <div className="rounded-[calc(2rem-0.375rem)] border border-white/10 bg-zinc-950/95 p-4 sm:p-5">
           <div className="mb-4 flex items-center justify-between gap-4">
             <p className="text-[10px] uppercase tracking-[0.28em] text-zinc-400 sm:text-xs">
-              Tap outside or press escape to close
+              Klikni izvan slike ili pritisni Esc za zatvaranje
             </p>
             <button
               type="button"
               onClick={onClose}
               className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/[0.04] text-sm font-medium text-zinc-300 transition duration-500 ease-premium hover:border-white/20 hover:bg-white/[0.08] hover:text-white"
-              aria-label="Close image preview"
+              aria-label="Zatvori pregled slike"
             >
               ✕
             </button>
