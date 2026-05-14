@@ -1,9 +1,11 @@
 'use client'
 
 import brandLogo from '../../Logo A-Negativ.png'
-import ContactForm from './ContactForm'
 import Footer from '../landing/Footer'
 import SiteHeader from '../landing/SiteHeader'
+
+const email = 'whitebeltbjj.pula@gmail.com'
+const phone = '+385995096936'
 
 export default function ContactPageClient() {
   return (
@@ -57,7 +59,41 @@ export default function ContactPageClient() {
               </div>
             </section>
 
-            <ContactForm />
+            <section className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-1.5">
+              <div className="flex min-h-full flex-col justify-between rounded-[calc(2rem-0.375rem)] border border-white/10 bg-white/[0.03] p-8 shadow-[inset_0_1px_1px_rgba(255,255,255,0.12)] sm:p-10">
+                <div>
+                  <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-zinc-500">Direktan kontakt</p>
+                  <h2 className="mt-4 font-display text-[clamp(2.5rem,5vw,4.75rem)] uppercase leading-[0.9] tracking-[0.03em] text-white">
+                    Javi nam se pozivom ili emailom.
+                  </h2>
+                  <p className="mt-5 max-w-xl text-base leading-7 text-zinc-400 sm:text-lg">
+                    Za prvi trening, raspored ili dodatne informacije, kontaktiraj nas direktno. Odgovorit ćemo ti čim prije.
+                  </p>
+                </div>
+
+                <div className="mt-10 grid gap-4">
+                  <a
+                    href={`mailto:${email}`}
+                    className="group rounded-[1.5rem] border border-white/10 bg-zinc-950/80 p-6 transition duration-500 ease-premium hover:border-white/30 hover:bg-white/[0.06]"
+                  >
+                    <span className="text-[10px] font-medium uppercase tracking-[0.28em] text-zinc-500">Email</span>
+                    <span className="mt-3 block break-words text-xl text-zinc-100 transition duration-500 group-hover:text-white sm:text-2xl">
+                      {email}
+                    </span>
+                  </a>
+
+                  <a
+                    href={`tel:${phone}`}
+                    className="group rounded-[1.5rem] border border-white/10 bg-zinc-950/80 p-6 transition duration-500 ease-premium hover:border-white/30 hover:bg-white/[0.06]"
+                  >
+                    <span className="text-[10px] font-medium uppercase tracking-[0.28em] text-zinc-500">Telefon</span>
+                    <span className="mt-3 block text-2xl text-zinc-100 transition duration-500 group-hover:text-white sm:text-3xl">
+                      +385 99 509 6936
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </section>
           </div>
         </main>
 
