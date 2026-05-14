@@ -18,14 +18,14 @@ export default function ContactPageClient() {
       <div className="relative overflow-x-hidden">
         <SiteHeader brandLogo={brandLogo} homeHref="/" showSectionLinks={false} active="contact" />
 
-        <main className="px-4 pb-20 pt-32 sm:px-8 md:px-12 md:pb-28 md:pt-36 lg:px-16">
-          <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-12">
-            <section className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-1.5">
-              <div className="rounded-[calc(2rem-0.375rem)] border border-white/10 bg-zinc-950/90 p-8 shadow-[inset_0_1px_1px_rgba(255,255,255,0.14)] sm:p-10">
-                <div className="inline-flex rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-[10px] font-medium uppercase tracking-[0.28em] text-zinc-300">
+        <main className="px-3 pb-20 pt-32 sm:px-8 md:px-12 md:pb-28 md:pt-36 lg:px-16">
+          <div className="mx-auto grid max-w-7xl min-w-0 gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start lg:gap-12">
+            <section className="min-w-0 rounded-[2rem] border border-white/10 bg-white/[0.04] p-1.5">
+              <div className="min-w-0 rounded-[calc(2rem-0.375rem)] border border-white/10 bg-zinc-950/90 p-6 shadow-[inset_0_1px_1px_rgba(255,255,255,0.14)] sm:p-10">
+                <div className="inline-flex max-w-full rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-[9px] font-medium uppercase tracking-[0.2em] text-zinc-300 sm:text-[10px] sm:tracking-[0.28em]">
                   Kontaktiraj White Belt
                 </div>
-                <h1 className="mt-5 font-display text-[clamp(3rem,7vw,5.5rem)] uppercase leading-[0.9] tracking-[0.03em] text-white">
+                <h1 className="mt-5 max-w-full break-words font-display text-[clamp(2.65rem,14vw,5.5rem)] uppercase leading-[0.9] tracking-[0.03em] text-white sm:text-[clamp(3rem,7vw,5.5rem)]">
                   Krenimo s tvojim prvim treningom.
                 </h1>
                 <p className="mt-5 max-w-xl text-base leading-7 text-zinc-400 sm:text-lg">
@@ -35,7 +35,7 @@ export default function ContactPageClient() {
                 <div className="mt-10 space-y-6 border-t border-white/10 pt-8">
                   <div>
                     <p className="text-[11px] font-medium uppercase tracking-[0.24em] text-zinc-500">Email</p>
-                    <p className="mt-2 text-lg text-zinc-200">whitebeltbjj.pula@gmail.com </p>
+                    <p className="mt-2 break-all text-lg text-zinc-200">whitebeltbjj.pula@gmail.com</p>
                   </div>
                   <div>
                     <p className="text-[11px] font-medium uppercase tracking-[0.24em] text-zinc-500">Lokacija</p>
@@ -59,8 +59,8 @@ export default function ContactPageClient() {
               </div>
             </section>
 
-            <section className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-1.5">
-              <div className="flex min-h-full flex-col justify-between rounded-[calc(2rem-0.375rem)] border border-white/10 bg-white/[0.03] p-8 shadow-[inset_0_1px_1px_rgba(255,255,255,0.12)] sm:p-10">
+            <section className="min-w-0 rounded-[2rem] border border-white/10 bg-white/[0.04] p-1.5">
+              <div className="flex min-h-full min-w-0 flex-col justify-between rounded-[calc(2rem-0.375rem)] border border-white/10 bg-white/[0.03] p-6 shadow-[inset_0_1px_1px_rgba(255,255,255,0.12)] sm:p-10">
                 <div>
                   <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-zinc-500">Direktan kontakt</p>
                   <h2 className="mt-4 font-display text-[clamp(2.5rem,5vw,4.75rem)] uppercase leading-[0.9] tracking-[0.03em] text-white">

@@ -18,6 +18,10 @@ const barlowCondensed = Barlow_Condensed({
 export const metadata = {
   title: 'White Belt Jiu Jitsu',
   description: 'White Belt Jiu Jitsu stranica lokalnog jiu jitsu kluba u Puli.',
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-icon.png',
+  },
 }
 
 export default function RootLayout({ children }) {
