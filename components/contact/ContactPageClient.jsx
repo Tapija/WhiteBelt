@@ -33,10 +33,7 @@ export default function ContactPageClient() {
                 </p>
 
                 <div className="mt-10 space-y-6 border-t border-white/10 pt-8">
-                  <div>
-                    <p className="text-[11px] font-medium uppercase tracking-[0.24em] text-zinc-500">Email</p>
-                    <p className="mt-2 break-all text-lg text-zinc-200">whitebeltbjj.pula@gmail.com</p>
-                  </div>
+                  
                   <div>
                     <p className="text-[11px] font-medium uppercase tracking-[0.24em] text-zinc-500">Lokacija</p>
                     <p className="mt-2 text-lg leading-8 text-zinc-200">

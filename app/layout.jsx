@@ -1,9 +1,9 @@
-import { Barlow_Condensed, Plus_Jakarta_Sans } from 'next/font/google'
+import { Barlow_Condensed, Inter } from 'next/font/google'
 import Script from 'next/script'
 import { absoluteUrl, siteConfig } from './seo'
 import './globals.css'
 
-const plusJakartaSans = Plus_Jakarta_Sans({
+const inter = Inter({
   subsets: ['latin'],
   variable: '--font-sans',
   display: 'swap',
@@ -82,7 +82,7 @@ export default function RootLayout({ children }) {
           />
         ) : null}
       </head>
-      <body className={`${plusJakartaSans.variable} ${barlowCondensed.variable} bg-base text-white antialiased`}>
+      <body className={`${inter.variable} ${barlowCondensed.variable} bg-base text-white antialiased`}>
         {children}
       </body>
     </html>
