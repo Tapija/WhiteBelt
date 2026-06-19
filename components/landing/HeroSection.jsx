@@ -23,7 +23,7 @@ export default function HeroSection({ wordmarkImage, heroImage }) {
               href="/contact"
               className="group inline-flex items-center justify-between rounded-full border border-white bg-white px-6 py-3 text-sm font-bold tracking-[0.22em] text-black transition-all duration-700 ease-premium hover:-translate-y-px hover:bg-zinc-100 active:scale-[0.98]"
             >
-              <span>ZAPOČNI SVOJ PUT</span>
+              <span>PRIJAVI SE</span>
               <span className="ml-4 inline-flex h-8 w-8 items-center justify-center rounded-full bg-black text-white transition-all duration-700 ease-premium group-hover:translate-x-1 group-hover:-translate-y-[1px] group-hover:scale-105">
                 <ArrowIcon className="h-3.5 w-3.5" />
               </span>
