@@ -28,7 +28,7 @@ export default function HeroSection({ wordmarkImage, heroImage }) {
                 <ArrowIcon className="h-3.5 w-3.5" />
               </span>
             </Link>
-            <a href="#trainer" className="text-sm font-medium tracking-[0.2em] text-zinc-400 transition duration-500 ease-premium hover:text-white">
+            <a href="#trainer" className="pl-6 text-sm font-medium tracking-[0.2em] text-zinc-400 transition duration-500 ease-premium hover:text-white sm:pl-0">
               UPOZNAJ KLUB
             </a>
           </div>
