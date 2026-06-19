@@ -46,7 +46,7 @@ export default function AboutSection({ schedule }) {
 
         <InfoCard icon={<UsersIcon />} title="ZA SVE RAZINE" className="md:col-span-3">
           <p className="text-sm leading-7 text-zinc-400">
-            Od potpunih početnika do iskusnih vježbača, svaki trening je strukturiran tako da napredak bude jasan i postupan.
+            Od potpunih početnika do iskusnih boraca, svaki trening je strukturiran tako da napredak bude vidljiv i postupan.
           </p>
         </InfoCard>
       </div>

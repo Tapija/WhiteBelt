@@ -15,7 +15,7 @@ export default function HeroSection({ wordmarkImage, heroImage }) {
           </p>
           <div className="mb-8 h-px w-20 bg-white/80" />
           <p className="max-w-[34rem] text-lg leading-relaxed text-zinc-400 md:text-xl">
-            Lokalni BJJ klub u Puli za početnike i rekreativce — gradimo čvrste temelje, disciplinu i
+            Lokalni BJJ klub u Puli za početnike, rekreativce i iskusne borce — gradimo čvrste temelje, disciplinu i
             samopouzdanje koje ostaje na strunjači i izvan nje.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">

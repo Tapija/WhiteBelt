@@ -12,9 +12,7 @@ export default function CtaSection() {
           <h2 className="max-w-3xl font-display text-[clamp(2.75rem,6vw,5rem)] uppercase leading-[0.92] tracking-[0.03em] text-white">
             Treniraj s nama i postani najsnažnija verzija sebe.
           </h2>
-          <p className="mt-4 max-w-2xl text-base leading-7 text-zinc-400 md:text-lg">
-            Posvećenost BJJ treningu, jasan sustav i ekipa u Puli koja poštuje rad.
-          </p>
+         
         </div>
         <div className="px-6 pb-6 md:px-8 md:pb-8">
           <Link

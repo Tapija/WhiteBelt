@@ -1,5 +1,6 @@
-import SocialLink from './SocialLink'
-import { FacebookIcon, InstagramIcon, YoutubeIcon } from './icons'
+// Social links are temporarily disabled until the client provides the final URLs.
+// import SocialLink from './SocialLink'
+// import { FacebookIcon, InstagramIcon, YoutubeIcon } from './icons'
 
 export default function Footer() {
   return (
@@ -9,17 +10,7 @@ export default function Footer() {
           <p className="text-sm text-zinc-500">© 2024 White Belt Jiu Jitsu.</p>
           <p className="mt-1 text-xs uppercase tracking-[0.22em] text-zinc-600">Šijanska cesta 1a · Pula</p>
         </div>
-        <div className="flex items-center gap-3">
-          <SocialLink href="#" label="Instagram">
-            <InstagramIcon />
-          </SocialLink>
-          <SocialLink href="#" label="Facebook">
-            <FacebookIcon />
-          </SocialLink>
-          <SocialLink href="#" label="YouTube">
-            <YoutubeIcon />
-          </SocialLink>
-        </div>
+        {/* Social links will be re-enabled here once the client provides Instagram, Facebook, and YouTube URLs. */}
       </div>
     </footer>
   )
