@@ -75,7 +75,8 @@ export default function TrainerSection() {
               Iste godine krenula je i moja natjecateljska priča. Prvo natjecanje, pa drugo, pa sljedeće — i tako
               stotinjak mečeva kasnije još sam uvijek ovdje, spreman za novi izazov. Godine 2022. upisao sam
               osposobljavanje za voditelja Ju Jitsu-a na Hrvatskom institutu za kineziologiju u Zagrebu, završio ga
-              2023., a iste godine licenciran sam i za suca Ju Jitsu-a.
+              2023., a iste godine licenciran sam i za suca Ju Jitsu-a. Godine 2026. odradio sam i mikrokvalifikaciju
+              za trenera Ju Jitsu-a 1. razine.
             </p>
 
             <div className="mt-8 grid gap-4 sm:grid-cols-3">
