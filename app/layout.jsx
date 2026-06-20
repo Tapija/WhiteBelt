@@ -18,29 +18,33 @@ const barlowCondensed = Barlow_Condensed({
 
 export const metadata = {
   metadataBase: new URL(siteConfig.url),
+  manifest: '/manifest.webmanifest',
   title: {
     default: 'White Belt Jiu Jitsu Pula | BJJ treninzi u Puli',
     template: '%s | White Belt Jiu Jitsu Pula',
   },
   description: siteConfig.description,
+  category: siteConfig.category,
+  classification: 'Sports club',
   applicationName: siteConfig.name,
   keywords: siteConfig.keywords,
   authors: [{ name: siteConfig.name }],
   creator: siteConfig.name,
   publisher: siteConfig.name,
+  referrer: 'origin-when-cross-origin',
   alternates: {
     canonical: '/',
   },
   openGraph: {
     type: 'website',
-    locale: 'hr_HR',
+    locale: siteConfig.locale,
     url: siteConfig.url,
     siteName: siteConfig.name,
     title: 'White Belt Jiu Jitsu Pula | BJJ treninzi u Puli',
     description: siteConfig.description,
     images: [
       {
-        url: absoluteUrl('/og-image.png'),
+        url: absoluteUrl(siteConfig.ogImage),
         width: 1200,
         height: 630,
         alt: 'White Belt Jiu Jitsu Pula',
@@ -51,7 +55,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'White Belt Jiu Jitsu Pula | BJJ treninzi u Puli',
     description: siteConfig.description,
-    images: [absoluteUrl('/og-image.png')],
+    images: [absoluteUrl(siteConfig.ogImage)],
   },
   robots: {
     index: true,
@@ -70,9 +74,13 @@ export const metadata = {
   },
 }
 
+export const viewport = {
+  themeColor: siteConfig.themeColor,
+}
+
 export default function RootLayout({ children }) {
   return (
-    <html lang="hr" className="scroll-smooth">
+    <html lang={siteConfig.language} className="scroll-smooth">
       <head>
         {process.env.NODE_ENV === 'development' ? (
           <Script

@@ -1,6 +1,5 @@
-// Social links are temporarily disabled until the client provides the final URLs.
-// import SocialLink from './SocialLink'
-// import { FacebookIcon, InstagramIcon, YoutubeIcon } from './icons'
+import SocialLink from './SocialLink'
+import { InstagramIcon, YoutubeIcon } from './icons'
 
 export default function Footer() {
   return (
@@ -8,9 +7,20 @@ export default function Footer() {
       <div className="mx-auto flex max-w-7xl flex-col gap-5 md:flex-row md:items-center md:justify-between">
         <div>
           <p className="text-sm text-zinc-500">© 2024 White Belt Jiu Jitsu.</p>
-          <p className="mt-1 text-xs uppercase tracking-[0.22em] text-zinc-600">Šijanska cesta 1a · Pula</p>
+          <p className="mt-1 text-xs uppercase tracking-[0.22em] text-zinc-600">Šijanska cesta 1a · 52100 Pula</p>
         </div>
-        {/* Social links will be re-enabled here once the client provides Instagram, Facebook, and YouTube URLs. */}
+        <div className="flex items-center gap-3">
+          <SocialLink
+            href="https://www.instagram.com/whitebeltbjjpula?igsh=MWk1djJwbGs3azI0eA=="
+            label="Instagram"
+          >
+            <InstagramIcon />
+          </SocialLink>
+          <SocialLink href="https://youtube.com/@jjkwhitebelt?si=9snu-6M1f7cR4tTw" label="YouTube">
+            <YoutubeIcon />
+          </SocialLink>
+          {/* Facebook link stays disabled until the client provides the final URL. */}
+        </div>
       </div>
     </footer>
   )

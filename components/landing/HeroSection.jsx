@@ -6,6 +6,7 @@ export default function HeroSection({ wordmarkImage, heroImage }) {
     <section className="relative flex min-h-[100dvh] items-center" id="top">
       <div className="mx-auto grid w-full max-w-7xl gap-12 px-4 pb-16 pt-32 sm:px-8 md:grid-cols-[minmax(0,0.95fr)_minmax(420px,1.05fr)] md:px-12 md:pb-24 md:pt-36 lg:gap-20 lg:px-16">
         <div className="max-w-2xl self-center">
+          <h1 className="sr-only">White Belt Jiu Jitsu Pula — BJJ i Brazilian Jiu Jitsu u Puli</h1>
           <div className="mb-6 inline-flex rounded-full border border-white/10 bg-white/[0.03] px-3 py-1 text-[10px] font-medium uppercase tracking-[0.28em] text-zinc-300">
             BJJ i Brazilian Jiu Jitsu u Puli
           </div>

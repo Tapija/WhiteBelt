@@ -10,7 +10,7 @@ const highlights = [
   {
     value: '2023',
     eyebrow: 'Stručna potvrda',
-    title: 'Završeno osposobljavanje za voditelja Jiu Jitse.',
+    title: 'Završeno osposobljavanje za voditelja Ju Jitsu-a.',
     label: 'Formalno obrazovanje na Hrvatskom institutu za kineziologiju zaokružilo je praktično znanje stečeno na strunjači.',
   },
   {
@@ -67,15 +67,15 @@ export default function TrainerSection() {
 
             <p className="mt-5 max-w-3xl text-base leading-8 text-zinc-400 sm:text-lg">
               Zovem se Goran i na tatamiju sam još od srednjoškolskih dana. Nisam birao samo jednu disciplinu —
-              trenirao sam sve što sam mogao, od MMA-a i kickboxinga do Jiu Jitse. No 2017. godine, kada me studij
+              trenirao sam sve što sam mogao, od MMA-a i kickboxinga do Ju Jitsu-a. No 2017. godine, kada me studij
               odveo u drugi grad, Jiu Jitsu je postao ono čemu sam dao cijelo srce.
             </p>
 
             <p className="mt-5 max-w-3xl text-base leading-8 text-zinc-400 sm:text-lg">
               Iste godine krenula je i moja natjecateljska priča. Prvo natjecanje, pa drugo, pa sljedeće — i tako
               stotinjak mečeva kasnije još sam uvijek ovdje, spreman za novi izazov. Godine 2022. upisao sam
-              osposobljavanje za voditelja Jiu Jitse na Hrvatskom institutu za kineziologiju u Zagrebu, završio ga
-              2023., a iste godine licenciran sam i za suca Jiu Jitse.
+              osposobljavanje za voditelja Ju Jitsu-a na Hrvatskom institutu za kineziologiju u Zagrebu, završio ga
+              2023., a iste godine licenciran sam i za suca Ju Jitsu-a.
             </p>
 
             <div className="mt-8 grid gap-4 sm:grid-cols-3">

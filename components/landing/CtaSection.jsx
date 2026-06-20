@@ -12,7 +12,9 @@ export default function CtaSection() {
           <h2 className="max-w-3xl font-display text-[clamp(2.75rem,6vw,5rem)] uppercase leading-[0.92] tracking-[0.03em] text-white">
             Treniraj s nama i postani najsnažnija verzija sebe.
           </h2>
-         
+          <p className="mt-5 max-w-2xl text-base leading-7 text-zinc-400 sm:text-lg">
+            Javi se za svoj prvi BJJ trening u Puli i saznaj koji termin u White Belt Jiu Jitsu klubu najbolje odgovara tvom iskustvu i ciljevima.
+          </p>
         </div>
         <div className="px-6 pb-6 md:px-8 md:pb-8">
           <Link

@@ -29,7 +29,7 @@ export default function ContactPageClient() {
                   Krenimo s tvojim prvim treningom.
                 </h1>
                 <p className="mt-5 max-w-xl text-base leading-7 text-zinc-400 sm:text-lg">
-                  Bilo da tek počinješ ili se vraćaš treninzima, pošalji nam poruku i usmjerit ćemo te prema pravom prvom terminu.
+                  Bilo da tek počinješ ili se vraćaš treninzima, javi nam se i usmjerit ćemo te prema pravom prvom BJJ terminu u Puli.
                 </p>
 
                 <div className="mt-10 space-y-6 border-t border-white/10 pt-8">
@@ -39,7 +39,7 @@ export default function ContactPageClient() {
                     <p className="mt-2 text-lg leading-8 text-zinc-200">
                       Šijanska cesta 1a
                       <br />
-                      Pula
+                      52100 Pula
                     </p>
                   </div>
                   <div>
@@ -64,7 +64,7 @@ export default function ContactPageClient() {
                     Javi nam se pozivom ili emailom.
                   </h2>
                   <p className="mt-5 max-w-xl text-base leading-7 text-zinc-400 sm:text-lg">
-                    Za prvi trening, raspored ili dodatne informacije, kontaktiraj nas direktno. Odgovorit ćemo ti čim prije.
+                    Za prvi trening, raspored ili dodatne informacije o White Belt Jiu Jitsu Pula, kontaktiraj nas direktno. Odgovorit ćemo ti čim prije.
                   </p>
                 </div>
 
