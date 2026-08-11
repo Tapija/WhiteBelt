@@ -116,8 +116,8 @@ export const translations = {
     },
     reviews: {
       label: 'Google recenzije',
-      title: 'Riječ onih koji treniraju s nama.',
-      body: 'Iskustva članova i gostiju najbolje opisuju atmosferu na tatamiju.',
+      title: 'Iskustva onih koji su trenirali s nama.',
+      body: 'Iskustva članova i gostiju',
       scoreLabel: 'Ocjena na Googleu',
       starLabel: '5 od 5 zvjezdica',
       count: '5 recenzija',
