@@ -2,9 +2,36 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
+import { useLanguage } from '../i18n/LanguageProvider'
 
-const desktopLinkClass = 'text-sm font-medium tracking-[0.24em] text-zinc-400 transition duration-500 ease-premium hover:text-white'
+const desktopLinkClass = 'text-[11px] font-medium tracking-[0.18em] text-zinc-400 transition duration-500 ease-premium hover:text-white xl:text-xs xl:tracking-[0.22em]'
 const mobileLinkClass = 'block rounded-2xl border border-white/10 bg-white/[0.03] px-5 py-4 text-sm font-medium uppercase tracking-[0.22em] text-zinc-200 transition duration-300 hover:bg-white/[0.08] hover:text-white'
+
+function LanguageSwitch({ compact = false }) {
+  const { language, setLanguage, copy } = useLanguage()
+
+  return (
+    <div
+      className={`inline-flex items-center rounded-full border border-white/15 bg-zinc-950/70 p-1 ${compact ? '' : 'ml-1'}`}
+      role="group"
+      aria-label={copy.nav.languageLabel}
+    >
+      {['hr', 'en'].map((option) => (
+        <button
+          key={option}
+          type="button"
+          onClick={() => setLanguage(option)}
+          aria-pressed={language === option}
+          className={`rounded-full px-3 py-2 text-[10px] font-bold uppercase tracking-[0.18em] transition duration-300 active:scale-[0.98] ${
+            language === option ? 'bg-white text-zinc-950' : 'text-zinc-500 hover:text-white'
+          }`}
+        >
+          {option}
+        </button>
+      ))}
+    </div>
+  )
+}
 
 export default function SiteHeader({
   brandLogo,
@@ -14,19 +41,24 @@ export default function SiteHeader({
   active = 'home',
 }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const { copy } = useLanguage()
 
   const closeMenu = () => setIsMenuOpen(false)
 
   const menuItems = showSectionLinks
     ? [
-        { label: 'POČETNA', href: '#top', type: 'anchor', active: active === 'home' },
-        { label: 'TRENINZI', href: '#about', type: 'anchor' },
-        { label: 'O NAMA', href: '#trainer', type: 'anchor' },
-        { label: 'KONTAKT', href: contactHref, type: 'link' },
+        { label: copy.nav.home, href: '#top', type: 'anchor', active: active === 'home' },
+        { label: copy.nav.club, href: '#club', type: 'anchor' },
+        { label: copy.nav.training, href: '#training', type: 'anchor' },
+        { label: copy.nav.offers, href: '#offers', type: 'anchor' },
+        { label: copy.nav.trainer, href: '#trainer', type: 'anchor' },
+        { label: copy.nav.reviews, href: '#reviews', type: 'anchor' },
+        { label: copy.nav.gallery, href: '#gallery', type: 'anchor' },
+        { label: copy.nav.contact, href: contactHref, type: 'link' },
       ]
     : [
-        { label: 'POČETNA', href: '/', type: 'link' },
-        { label: 'KONTAKT', href: '/contact', type: 'span', active: true },
+        { label: copy.nav.home, href: '/', type: 'link' },
+        { label: copy.nav.contact, href: '/contact', type: 'span', active: true },
       ]
 
   return (
@@ -38,57 +70,65 @@ export default function SiteHeader({
             White Belt Club
           </div>
         </a>
-        <nav className="hidden items-center gap-10 md:flex">
-          {showSectionLinks ? (
-            <>
-              <a href="#top" className={`pb-1 text-sm font-medium tracking-[0.24em] ${active === 'home' ? 'border-b border-white text-white' : 'text-zinc-400 transition duration-500 ease-premium hover:text-white'}`}>
-                POČETNA
+        <nav className="hidden items-center gap-4 lg:flex xl:gap-5">
+          {menuItems.map((item) => {
+            const className = item.active
+              ? 'border-b border-white pb-1 text-[11px] font-medium tracking-[0.18em] text-white xl:text-xs xl:tracking-[0.22em]'
+              : desktopLinkClass
+
+            if (item.type === 'span') {
+              return (
+                <span key={item.label} className={className}>
+                  {item.label}
+                </span>
+              )
+            }
+
+            if (item.type === 'link') {
+              return (
+                <Link key={item.label} href={item.href} className={className}>
+                  {item.label}
+                </Link>
+              )
+            }
+
+            return (
+              <a key={item.label} href={item.href} className={className}>
+                {item.label}
               </a>
-              <a href="#about" className="text-sm font-medium tracking-[0.24em] text-zinc-400 transition duration-500 ease-premium hover:text-white">
-                TRENINZI
-              </a>
-              <a href="#trainer" className="text-sm font-medium tracking-[0.24em] text-zinc-400 transition duration-500 ease-premium hover:text-white">
-                O NAMA
-              </a>
-              <Link href={contactHref} className={desktopLinkClass}>
-                KONTAKT
-              </Link>
-            </>
-          ) : (
-            <>
-              <Link href="/" className={desktopLinkClass}>
-                POČETNA
-              </Link>
-              <span className="border-b border-white pb-1 text-sm font-medium tracking-[0.24em] text-white">
-                KONTAKT
-              </span>
-            </>
-          )}
+            )
+          })}
+          <LanguageSwitch />
         </nav>
 
-        <button
-          type="button"
-          className="group inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/[0.05] text-white transition duration-300 hover:bg-white/[0.1] md:hidden"
-          aria-label={isMenuOpen ? 'Zatvori izbornik' : 'Otvori izbornik'}
-          aria-expanded={isMenuOpen}
-          aria-controls="mobile-navigation"
-          onClick={() => setIsMenuOpen((value) => !value)}
-        >
-          <span className="relative h-4 w-5">
-            <span className={`absolute left-0 top-0 h-px w-5 bg-current transition duration-300 ${isMenuOpen ? 'translate-y-2 rotate-45' : ''}`} />
-            <span className={`absolute left-0 top-2 h-px w-5 bg-current transition duration-300 ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`} />
-            <span className={`absolute left-0 top-4 h-px w-5 bg-current transition duration-300 ${isMenuOpen ? '-translate-y-2 -rotate-45' : ''}`} />
-          </span>
-        </button>
+        <div className="flex items-center gap-2 lg:hidden">
+          <LanguageSwitch compact />
+          <button
+            type="button"
+            className="group inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/[0.05] text-white transition duration-300 hover:bg-white/[0.1]"
+            aria-label={isMenuOpen ? copy.nav.closeMenu : copy.nav.openMenu}
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-navigation"
+            onClick={() => setIsMenuOpen((value) => !value)}
+          >
+            <span className="relative h-4 w-5">
+              <span className={`absolute left-0 top-0 h-px w-5 bg-current transition duration-300 ${isMenuOpen ? 'translate-y-2 rotate-45' : ''}`} />
+              <span className={`absolute left-0 top-2 h-px w-5 bg-current transition duration-300 ${isMenuOpen ? 'opacity-0' : 'opacity-100'}`} />
+              <span className={`absolute left-0 top-4 h-px w-5 bg-current transition duration-300 ${isMenuOpen ? '-translate-y-2 -rotate-45' : ''}`} />
+            </span>
+          </button>
+        </div>
       </div>
 
       <div
         id="mobile-navigation"
-        className={`mx-auto mt-3 max-w-7xl overflow-hidden rounded-[1.75rem] border border-white/10 bg-zinc-950/95 shadow-glass backdrop-blur-2xl transition-all duration-300 md:hidden ${
-          isMenuOpen ? 'max-h-96 opacity-100' : 'pointer-events-none max-h-0 opacity-0'
+        aria-hidden={!isMenuOpen}
+        inert={isMenuOpen ? undefined : ''}
+        className={`mx-auto mt-3 max-w-7xl overflow-hidden rounded-[1.75rem] border border-white/10 bg-zinc-950/95 shadow-glass backdrop-blur-2xl transition-all duration-300 lg:hidden ${
+          isMenuOpen ? 'max-h-[44rem] opacity-100' : 'pointer-events-none max-h-0 opacity-0'
         }`}
       >
-        <nav className="space-y-2 p-3" aria-label="Mobilna navigacija">
+        <nav className="space-y-2 p-3" aria-label={copy.nav.mobileLabel}>
           {menuItems.map((item) => {
             const className = `${mobileLinkClass} ${item.active ? 'border-white/40 bg-white/[0.1] text-white' : ''}`
 

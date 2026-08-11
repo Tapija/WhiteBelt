@@ -106,3 +106,28 @@ export function YoutubeIcon() {
     </svg>
   )
 }
+
+export function LinktreeIcon({ className = 'h-5 w-5' }) {
+  return (
+    <svg
+      className={className}
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.75"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="m12 3-4 4h2.6L7 10.6h3.1L6 14.7h4.8V21h2.4v-6.3H18l-4.1-4.1H17L13.4 7H16l-4-4Z" />
+    </svg>
+  )
+}
+
+export function StarIcon({ className = 'h-5 w-5' }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="m12 2.75 2.78 5.63 6.22.9-4.5 4.39 1.06 6.2L12 16.94l-5.56 2.93 1.06-6.2L3 9.28l6.22-.9L12 2.75Z" />
+    </svg>
+  )
+}

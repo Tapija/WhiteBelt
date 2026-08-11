@@ -25,6 +25,8 @@ export const siteConfig = {
   socialLinks: {
     instagram: 'https://www.instagram.com/whitebeltbjjpula?igsh=MWk1djJwbGs3azI0eA==',
     youtube: 'https://youtube.com/@jjkwhitebelt?si=9snu-6M1f7cR4tTw',
+    facebook: 'https://www.facebook.com/share/1C4dgFsops/',
+    linktree: 'https://linktr.ee/whitebeltbjj.pula',
   },
   keywords: [
     'BJJ Pula',
@@ -48,4 +50,3 @@ export function absoluteUrl(path = '/') {
   const normalizedPath = path.startsWith('/') ? path : `/${path}`
   return new URL(normalizedPath, siteConfig.url).toString()
 }
-

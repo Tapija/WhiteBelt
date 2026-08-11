@@ -10,7 +10,7 @@ const config = {
         display: ['var(--font-display)', 'sans-serif'],
       },
       colors: {
-        base: '#050505',
+        canvas: '#050505',
       },
       boxShadow: {
         glass: '0 20px 60px rgba(0,0,0,0.35)',

@@ -90,7 +90,7 @@ export default function RootLayout({ children }) {
           />
         ) : null}
       </head>
-      <body className={`${inter.variable} ${barlowCondensed.variable} bg-base text-white antialiased`}>
+      <body className={`${inter.variable} ${barlowCondensed.variable} bg-canvas text-white antialiased`}>
         {children}
       </body>
     </html>
