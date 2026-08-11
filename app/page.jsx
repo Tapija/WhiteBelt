@@ -47,7 +47,12 @@ const localBusinessJsonLd = {
   email: siteConfig.email,
   telephone: siteConfig.phone,
   priceRange: '$$',
-  sameAs: [siteConfig.socialLinks.instagram, siteConfig.socialLinks.youtube],
+  sameAs: [
+    siteConfig.socialLinks.instagram,
+    siteConfig.socialLinks.youtube,
+    siteConfig.socialLinks.facebook,
+    siteConfig.socialLinks.linktree,
+  ],
   sport: ['Brazilian Jiu Jitsu', 'BJJ', 'Jiu Jitsu', 'Grappling'],
   knowsAbout: ['BJJ treninzi', 'Brazilian Jiu Jitsu za početnike', 'Grappling', 'Borilački sportovi'],
   address: {
@@ -61,7 +66,7 @@ const localBusinessJsonLd = {
       telephone: siteConfig.phone,
       email: siteConfig.email,
       areaServed: 'HR',
-      availableLanguage: ['hr'],
+      availableLanguage: ['hr', 'en'],
     },
   ],
   areaServed: [
