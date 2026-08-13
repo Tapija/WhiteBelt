@@ -59,7 +59,7 @@ export const translations = {
     },
     offers: {
       label: 'Prijave',
-      title: 'Odaberi trening koji odgovara tvom cilju.',
+      title: 'Samo jedan korak dijeli te od treninga.',
       body: 'Od prvog dolaska do individualnog rada — sve prijave i aktualne opcije nalaze se na našem Linktree profilu.',
       linktreeLabel: 'Sve opcije na jednom mjestu',
       cta: 'OTVORI PRIJAVE',
@@ -233,7 +233,7 @@ export const translations = {
     },
     offers: {
       label: 'Sign up',
-      title: 'Choose the training that fits your goal.',
+      title: 'You’re only one step away from training.',
       body: 'From your first visit to focused one-to-one work — all sign-ups and current options are available through our Linktree profile.',
       linktreeLabel: 'Every option in one place',
       cta: 'OPEN SIGN-UPS',
