@@ -48,12 +48,9 @@ export default function SiteHeader({
   const menuItems = showSectionLinks
     ? [
         { label: copy.nav.home, href: '#top', type: 'anchor', active: active === 'home' },
-        { label: copy.nav.club, href: '#club', type: 'anchor' },
         { label: copy.nav.training, href: '#training', type: 'anchor' },
         { label: copy.nav.offers, href: '#offers', type: 'anchor' },
         { label: copy.nav.trainer, href: '#trainer', type: 'anchor' },
-        { label: copy.nav.reviews, href: '#reviews', type: 'anchor' },
-        { label: copy.nav.gallery, href: '#gallery', type: 'anchor' },
         { label: copy.nav.contact, href: contactHref, type: 'link' },
       ]
     : [
