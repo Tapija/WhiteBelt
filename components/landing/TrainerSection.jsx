@@ -3,7 +3,8 @@ import { useLanguage } from '../i18n/LanguageProvider'
 
 export default function TrainerSection() {
   const { copy } = useLanguage()
-  const highlights = copy.trainer.highlights
+  const matchRecord = copy.trainer.highlights.find((item) => item.type === 'stat')
+  const highlights = copy.trainer.highlights.filter((item) => item.type !== 'stat')
 
   return (
     <section className="scroll-mt-28 px-4 pb-20 pt-8 sm:px-8 md:px-12 md:pb-28 md:pt-14 lg:px-16" id="trainer" aria-labelledby="trainer-title">
@@ -30,7 +31,7 @@ export default function TrainerSection() {
             </div>
           </div>
 
-          <div className="flex flex-col justify-center p-7 sm:p-10 lg:p-14">
+          <div className="relative flex flex-col justify-center p-7 sm:p-10 lg:p-14">
             <p className="max-w-[62ch] text-pretty text-base leading-8 text-zinc-300 sm:text-lg">
               {copy.trainer.body}
             </p>
@@ -41,13 +42,9 @@ export default function TrainerSection() {
                   key={item.value}
                   className={`group relative min-h-44 overflow-hidden py-6 transition duration-500 hover:bg-white/[0.025] sm:p-6 ${
                     index % 2 === 0 ? 'sm:border-r sm:border-white/10' : ''
-                  } ${index < 2 ? 'border-b border-white/10' : ''} ${
-                    item.type === 'stat'
-                      ? 'bg-[repeating-linear-gradient(135deg,rgba(255,255,255,0.065)_0px,rgba(255,255,255,0.065)_1px,transparent_1px,transparent_12px)] shadow-[inset_0_0_0_1px_rgba(255,255,255,0.065)]'
-                      : ''
-                  }`}
+                  } ${index < 2 ? 'border-b border-white/10' : ''}`}
                 >
-                  <p className={`relative text-[10px] font-semibold uppercase tracking-[0.26em] ${item.type === 'stat' ? 'text-zinc-400' : 'text-zinc-500'}`}>
+                  <p className="relative text-[10px] font-semibold uppercase tracking-[0.26em] text-zinc-500">
                     {item.eyebrow}
                   </p>
                   <p className="relative mt-4 font-display text-5xl font-semibold leading-none tracking-[0.02em] text-white">
@@ -57,6 +54,12 @@ export default function TrainerSection() {
                 </article>
               ))}
             </div>
+
+            {matchRecord && (
+              <p className="absolute inset-x-7 bottom-2 text-center text-xs leading-5 text-zinc-500 sm:inset-x-10 sm:bottom-3 sm:text-sm lg:inset-x-14 lg:bottom-4">
+                {matchRecord.value} {matchRecord.title}
+              </p>
+            )}
           </div>
         </div>
       </div>

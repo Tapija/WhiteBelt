@@ -22,7 +22,7 @@ function HomePageContent() {
   const { copy } = useLanguage()
   const schedule = copy.training.days.map((day, index) => ({
     day,
-    time: '18:00 – 19:00',
+    time: copy.training.times[index],
     format: index === 1 ? 'NoGi' : 'Gi',
     icon: index === 1 ? '👕' : '🥋',
   }))

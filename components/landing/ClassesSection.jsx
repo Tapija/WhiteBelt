@@ -33,9 +33,15 @@ const galleryImages = [
   },
   {
     src: '/1000055414.jpg',
-    cardClass: 'sm:col-span-2 lg:col-span-12',
-    frameClass: 'aspect-[16/9]',
+    cardClass: 'sm:col-span-2 lg:col-span-8',
+    frameClass: 'aspect-[3/2]',
     positionClass: 'object-[center_42%]',
+  },
+  {
+    src: '/apex-bjj-seminar.jpeg',
+    cardClass: 'sm:col-span-2 lg:col-span-4',
+    frameClass: 'aspect-[3/4] lg:h-full lg:aspect-auto',
+    positionClass: 'object-[center_62%]',
   },
 ]
 

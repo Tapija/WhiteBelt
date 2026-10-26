@@ -25,7 +25,7 @@ export const translations = {
     about: {
       label: 'O klubu',
       title: 'JJK White Belt — svi smo nekad bili početnici',
-      body: 'Ju Jitsu Klub „White Belt” je registrirana udruga u Puli, osnovana 2025. godine s jednostavnom idejom: svatko može naučiti Jiu-Jitsu, bez obzira na dob, iskustvo ili fizičku spremu. Umjesto da učimo tehnike napamet, gradimo razumijevanje — svaka pozicija i svaki pokret imaju svoj „zašto”, pa znanje ostaje primjenjivo bez obzira s kim ili gdje treniraš. Klub je probacijski (associate) član Hrvatskog Ju Jitsu Saveza (HJJS), a treninzi su otvoreni za potpune početnike, rekreativce i natjecatelje.',
+      body: 'Ju Jitsu Klub „White Belt” je registrirana udruga u Puli, osnovana 2025. godine s jednostavnom idejom: svatko može naučiti Jiu-Jitsu, bez obzira na dob, iskustvo ili fizičku spremu. Umjesto da učimo tehnike napamet, gradimo razumijevanje — svaka pozicija i svaki pokret imaju svoj „zašto”, pa znanje ostaje primjenjivo bez obzira s kim ili gdje treniraš. Klub je službeno afiliiran pod Apex BJJ iz Londona i probacijski (associate) član Hrvatskog Ju Jitsu Saveza (HJJS). Treninzi su otvoreni za potpune početnike, rekreativce i natjecatelje.',
       audiences: [
         {
           number: '01',
@@ -47,7 +47,10 @@ export const translations = {
     training: {
       label: 'Treninzi',
       title: 'Termini i lokacija',
-      frequency: 'Tri puta tjedno',
+      frequency: 'Djeca i odrasli',
+      children: 'Dječja grupa',
+      childrenDays: 'Ponedjeljak i Petak',
+      childrenTime: '17:00 – 18:00',
       scheduleTitle: 'TERMINI TRENINGA',
       location: 'LOKACIJA',
       locationIntro: 'BJJ treninzi u Puli',
@@ -56,6 +59,7 @@ export const translations = {
       answer: 'Javi nam se.',
       contact: 'JAVI NAM SE',
       days: ['Ponedjeljak', 'Srijeda', 'Petak'],
+      times: ['18:15 – 19:15', '18:00 – 19:00', '18:15 – 19:15'],
     },
     offers: {
       label: 'Prijave',
@@ -106,10 +110,11 @@ export const translations = {
           title: 'Licenca suca i osposobljavanje za voditelja Ju Jitsu-a.',
         },
         { value: '2025', eyebrow: 'Osnutak kluba', title: 'White Belt otvara svoja vrata u Puli.' },
+        { value: '2026', eyebrow: 'Crni pojas', title: 'Promoviran u crni pojas brazilskog Jiu-Jitsua pod profesorom Davidom Cartwright-Khozom.' },
         {
           value: '100+',
           eyebrow: 'Natjecateljski put',
-          title: 'Mečeva na natjecanjima diljem Europe.',
+          title: 'mečeva na natjecanjima diljem Europe.',
           type: 'stat',
         },
       ],
@@ -149,6 +154,7 @@ export const translations = {
         { alt: 'White Belt članovi uz borilište na natjecanju', aria: 'Otvori fotografiju White Belt članova na natjecanju u punoj veličini' },
         { alt: 'Demonstracija tehnike na White Belt treningu', aria: 'Otvori fotografiju demonstracije tehnike u punoj veličini' },
         { alt: 'Grupna fotografija White Belt tima', aria: 'Otvori grupnu fotografiju White Belt tima u punoj veličini' },
+        { alt: 'White Belt i Apex BJJ članovi nakon zajedničkog treninga', aria: 'Otvori fotografiju White Belt i Apex BJJ članova u punoj veličini' },
       ],
     },
     cta: {
@@ -199,7 +205,7 @@ export const translations = {
     about: {
       label: 'The club',
       title: 'JJK White Belt — everyone starts as a beginner',
-      body: 'Ju Jitsu Club “White Belt” is a registered association in Pula, founded in 2025 with one simple idea: anyone can learn Jiu-Jitsu, regardless of age, experience or fitness level. Instead of memorising techniques, we build understanding — every position and movement has a reason, so your knowledge stays useful no matter who you train with, or where. The club is an associate member of the Croatian Ju Jitsu Federation (HJJS), and our sessions are open to complete beginners, recreational athletes and competitors.',
+      body: 'Ju Jitsu Club “White Belt” is a registered association in Pula, founded in 2025 with one simple idea: anyone can learn Jiu-Jitsu, regardless of age, experience or fitness level. Instead of memorising techniques, we build understanding — every position and movement has a reason, so your knowledge stays useful no matter who you train with, or where. The club is officially affiliated with Apex BJJ in London and is an associate member of the Croatian Ju Jitsu Federation (HJJS). Sessions are open to complete beginners, recreational athletes and competitors.',
       audiences: [
         {
           number: '01',
@@ -221,7 +227,10 @@ export const translations = {
     training: {
       label: 'Training',
       title: 'Schedule and location',
-      frequency: 'Three times a week',
+      frequency: 'Kids and adults',
+      children: 'Kids group',
+      childrenDays: 'Monday and Friday',
+      childrenTime: '5:00–6:00 pm',
       scheduleTitle: 'TRAINING SCHEDULE',
       location: 'LOCATION',
       locationIntro: 'BJJ training in Pula',
@@ -230,6 +239,7 @@ export const translations = {
       answer: 'Get in touch.',
       contact: 'CONTACT US',
       days: ['Monday', 'Wednesday', 'Friday'],
+      times: ['6:15–7:15 pm', '6:00–7:00 pm', '6:15–7:15 pm'],
     },
     offers: {
       label: 'Sign up',
@@ -280,10 +290,11 @@ export const translations = {
           title: 'Referee licence and qualification as a Ju Jitsu coach.',
         },
         { value: '2025', eyebrow: 'Club founded', title: 'White Belt opens its doors in Pula.' },
+        { value: '2026', eyebrow: 'Black belt', title: 'Promoted to Brazilian Jiu-Jitsu black belt under Professor David Cartwright-Khoz.' },
         {
           value: '100+',
           eyebrow: 'Competition record',
-          title: 'Matches at competitions across Europe.',
+          title: 'matches at competitions across Europe.',
           type: 'stat',
         },
       ],
@@ -323,6 +334,7 @@ export const translations = {
         { alt: 'White Belt members beside the competition mats', aria: 'Open the White Belt members competition photo at full size' },
         { alt: 'Technique demonstration during White Belt training', aria: 'Open the technique demonstration photo at full size' },
         { alt: 'White Belt team group photo', aria: 'Open the White Belt team group photo at full size' },
+        { alt: 'White Belt and Apex BJJ members after a joint training session', aria: 'Open the full-size photo of White Belt and Apex BJJ members' },
       ],
     },
     cta: {

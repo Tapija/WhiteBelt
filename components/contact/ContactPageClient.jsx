@@ -12,7 +12,7 @@ function ContactPageContent() {
   const { copy } = useLanguage()
   const schedule = copy.training.days.map((day, index) => [
     day,
-    '18:00 – 19:00',
+    copy.training.times[index],
     index === 1 ? '👕' : '🥋',
     index === 1 ? 'NoGi' : 'Gi',
   ])

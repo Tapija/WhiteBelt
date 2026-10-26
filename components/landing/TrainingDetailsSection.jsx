@@ -44,6 +44,13 @@ export default function TrainingDetailsSection({ schedule }) {
                 </div>
               ))}
             </div>
+            <div className="mt-7 rounded-2xl border border-white/10 bg-white/[0.025] p-5">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.24em] text-zinc-500">{copy.training.children}</p>
+              <div className="mt-3 flex flex-wrap items-baseline justify-between gap-2">
+                <span className="text-sm font-medium text-zinc-200">{copy.training.childrenDays}</span>
+                <span className="text-sm tabular-nums text-zinc-400">{copy.training.childrenTime}</span>
+              </div>
+            </div>
           </article>
 
           <div className="grid gap-5">
